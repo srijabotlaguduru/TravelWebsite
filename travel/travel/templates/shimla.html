@@ -1,0 +1,273 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'style3.css'%}">
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="navdec1">
+        <div class="navdecchild"><img src="{% static 'travel_site_img/logo.jpg'%}" alt="" width="100px" style="margin-right: 0rem;">
+        </div>
+        <div class="navdecchild"><a class="navitems" href="index2.html">HOME</a></div>
+        <div class="navdecchild"><a class="navitems" href="goldenpackage.html">PACKAGE</a></div>
+        <div class="navdecchild"><a class="navitems" href="#plan">PLAN</a></div>
+      </div>
+    </nav>
+  </header>
+  <section>
+    <div class="picsec">
+      <h2 style="font-size: 40px; font-family:Lato, Arial, sans-serif; padding-left:4rem">Shimla
+      </h2>
+      <h2 style="font-size: 28px; font-family: sans-serif; padding-left:4rem">&#8377 8500 per person</h2>
+      <img src="{% static 'travel_site_img/destination.jpg'%}" alt="" height="40px" style="position:relative;padding-left:3.3rem">
+      <span style="font-size: 22px; font-family: sans-serif; position: absolute;">Shimla</span>
+      
+      
+      <div class="pictures">
+        <img src="{% static 'travel_site_img/shimla.jpg'%}" alt="" width="30%" HEIGHT="400px">
+        <img src="{% static 'travel_site_img/shim1.jpg'%}" width="30%" height="400px">
+        <!--<div class="centerimg" width="40%">
+          <img src="{% static 'travel_site_img/goa_2.jpg" alt="" width="100%" height="30%">
+          <img src="{% static 'travel_site_img/goa_3.jpg" alt="" width="100%" height="30%">
+        </div>-->
+        <img src="{% static 'travel_site_img/shim2.jpg'%}" alt="" width="30%" HEIGHT="400px" style="margin-left: 9px;">
+      </div>
+
+    </div>
+  </section>
+  <section>
+    <div>
+      <h2 style="font-size: 40px; font-family:Lato, Arial, sans-serif;margin-left:9.5rem ">About Package</h2>
+      <div style="display:flex;justify-content:stretch;margin-left: 6rem;">
+        <p style="padding-left: 4rem;padding-right: 3rem;font-size:22px;font-family: Arial, Helvetica, sans-serif; width: 60%;text-align: justify;">Book you lucrative tour package of Shimla for 3 Nights, 4 Days offered by Asian Travels at  8,500 /Per Person .
+             Find detailed day wise itinerary of Shimla tour package below
+             Shimla is the capital and the largest city of the northern Indian state of Himachal Pradesh. 
+             In 1864, Shimla was declared as the summer capital of British India. </p>
+        <div style="width:40%;height: 300px;">
+          <div class="cost2">
+            <div class="cost_sub1">
+              <h2 style="font-size: 28px; font-family: sans-serif;">&#8377 8500</h2>
+              <h2 style="font-size: 28px; font-family: sans-serif;">/per person</h2>
+              <h2 style=" font-size: 28px; font-family: sans-serif;color:ash">*Excluding Applicable taxes</h2>
+
+            </div>
+            <div class="cost_sub2" style="position:relative;display:flex">
+              <img src="{% static 'travel_site_img/time.jpeg'%}" height="40px" alt="" style="position:absolute;">
+              <h2 style="font-size: 28px; font-family: sans-serif;position:absolute; right:30%; top:-10px">3 Nights / 4 Days</h2><span>
+                <a style="text-decoration: none;" href="try.html"><input type="button" value="Book" style="font-size: 28px; font-family: sans-serif;position:absolute;top:70px ;right:40% ;background-color:rgb(47, 228, 47);"></a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding:4rem 9.5rem;" class="summary">
+      <table>
+        <tr>
+          <td colspan="4" style="font-size:22px;text-align:centre;background-color:rgb(147, 188, 249)">Package Summary</td>
+        </tr>
+        <tr id="table1">
+          <td style="color:blue;font-size:18px">Day1</td>
+          <td><img src="{% static 'travel_site_img/car.png'%}" width="45px">Arrival </td>
+          <td><img src="{% static 'travel_site_img/visit.jpeg'%}" width="45px"> visit to mall road</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">Dinner at Hotel</td>
+        </tr>
+        <tr>
+          <td style="color:blue;font-size:18px">Day2</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">Breakfast</td>
+          <td><img src="{% static 'travel_site_img/visit.jpeg'%}" width="45px"> visit to Kufri,Mashobra</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">Dinner at Hotel</td>
+        </tr>
+        <tr>
+          <td style="color:blue;font-size:18px">Day3</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">Breakfast</td>
+          <td><img src="{% static 'travel_site_img/visit.jpeg'%}" width="45px"> glen and museum visit</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">Dinner at Hotel</td>
+        </tr>
+        <tr>
+          <td style="color:blue;font-size:18px">Day4</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">Breakfast</td>
+          <td><img src="{% static 'travel_site_img/car.png'%}" width="45px">Departure</td>
+        </tr>
+      </table>
+    </div>
+    <div style="margin-left: 9.5rem;" id="plan">
+      <h2 style="font-size: 40px; font-family:Lato, Arial, sans-serif;">Detailed Daywise itenerary</h2>
+    </div>
+    <div id="overview">
+      <table style="margin-left:9.5rem; width: 80vw; background-color: azure;">
+        <tr>
+          <td>
+            <div class="main_p">
+              <h3 style="font-size: 30px; font-family:Lato, Arial, sans-serif;" >Day 1 - Arrival in Shimla </h3>
+              <h3 style="color:blue;font-size:18px">CHECKIN @ 12AM</h3>
+              <div class="hotel">
+                <h2 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Hotel Royal</h2>
+                <img src="{% static 'travel_site_img/shimla_hotel.jpg'%}" alt="" width="300px">
+
+
+              </div>
+
+
+            </div>
+          </td>
+          <td style="margin-top:40em;">
+            <h3><a>INCLUDED: <img src="{% static 'travel_site_img/pla.png'%}" style="width:45px"> 1 flight | <img
+                  src="{% static 'travel_site_img/hotel.jpeg'%}" width="45px"> Hotel | <img src="{% static 'travel_site_img/car.png"
+                  width="45px"> 1 Transfer</a></h3>
+            <h3 style="color:blue;font-size:25px">Car service provided to hotel- 1hr</h3>
+            <h4>Baggage:</h4>
+            <h4><img src="{% static 'travel_site_img/cabin.png'%}" width="45px">Cabin:7kg</h4>
+            <h4><img src="{% static 'travel_site_img/bag.png'%}" width="45px">Check-in:15kg</h4>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <h3 style="font-size:22px;font-family: Arial, Helvetica, sans-serif">On Arrival at Shimla meet our executive & Transfer to hotel 
+                 Check in to hotel rest later you will start with the awesome sightseeing tour in Shimla.
+                  Some of them are, Indian Institute of Advanced Studies, Sankat Mochan Holy place and Jakhu temple, along with the Ridge and Mall road where you can shop and eat your heart out. 
+                  Stay overnight after returning to the hotel.</h3>
+          </td>
+          <td style="margin-left:20rem">
+            <br>
+            <br>
+
+          </td>
+
+        </tr>
+
+
+        <tr>
+          <td>
+            <h2 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Places to Visit</h2>
+          </td>
+        </tr>
+        <tr>
+
+          <td>
+
+            <img src="{% static 'travel_site_img/jhaku temple.jpeg'%}" alt="" width="300px" height="150px">
+            <p>JAKHU TEMPLE</p>
+          </td>
+          <td>
+
+            <img src="{% static 'travel_site_img/mall road.jpg'%}" alt="" width="300px" height="150px">
+            <p>MALL ROAD</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">END OF THE DAY</h2>
+          </td>
+        <tr>
+          <td colspan="2">
+            <hr>
+          </td>
+        </tr>
+        </tr>
+
+
+        <tr>
+          <td>
+            <h3 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Day 2 - Visit Kufri & Mashobra </h3>
+            <h2><a><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">BREAKFAST </a></h2>
+
+            <img src="{% static 'travel_site_img/goa_museum.jpg'%}" alt="" width="300px">
+          </td>
+          <td style="margin-left:20rem">
+            <h3 style="font-size:22px;font-family: Arial, Helvetica, sans-serif">In the wake of the early morning breakfast, you will set out on a guided tour to Kufri which is the sports capital of Shimla and further to Mashobra post which you will return to the hotel in Shimla after exploring the Kufri Fun Campus, 
+                Himalayan Nature Park, the green valley, and so on. Stay overnight post having dinner!</h3>
+          </td>
+        <tr>
+          <td>
+            <h2 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Kufri & Mashobra</h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+
+            <img src="{% static 'travel_site_img/Kufri Fun Campus.jpeg'%}" alt="" width="300px" height="150px">
+            <p>Kufri Fun Campus</p>
+          </td>
+          <td>
+
+            <img src="{% static 'travel_site_img/Green-Valley.jpg'%}" alt="" width="300px" height="150px">
+            <p>GREEN VALLEY</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">END OF THE DAY</h2>
+          </td>
+
+        </tr>
+        <tr>
+          <td colspan="2">
+            <hr>
+          </td>
+        </tr>
+        <tr>
+
+          <td>
+            <h3 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Day 3 </h3>
+            <!--<h2><a><img src="{% static 'travel_site_img/bf.jpg" width="45px">BREAKFAST </a></h2>-->
+            <h3 style="color:blue;font-size:25px"> Day-3 Morning @ 10</h3>
+            <img src="{% static 'travel_site_img/shimla_museum.jpg'%}" alt="" width="300px">
+            <p>SHIMLA MUSEUM</p>
+          </td>
+          <td>
+            <h3 style="color:blue;font-size:25px">Afternoon @ 2:30pm</h3>
+            <img src="{% static 'travel_site_img/shimla glen.jpeg'%}" alt="" width="350px">
+            <p>SHIMLA GLEN</p>
+
+          </td>
+        </tr>
+       <tr>
+              <td>
+                <h2 style="font-size: 30px; font-family:Lato, sans-serif">END OF THE DAY</h2>
+              </td>
+            <tr>
+              <td colspan="2">
+                <hr>
+              </td>
+            </tr>
+            </tr>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Day 4-Departure From Shimla </h3>
+
+
+            <div class="home" style="width:75%">
+              <img src="{% static 'travel_site_img/plane.jpg'%}" alt="" width="250px">
+            </div>
+
+
+
+    </div>
+    </td>
+    <td style="margin-left:20rem">
+      <h3><a>INCLUDED: <img src="{% static 'travel_site_img/pla.png'%}" width="45px"> 1 flight | <img src="{% static 'travel_site_img/car.png"
+            width="45px"> 1 Transfer</a></h3>
+      <h4>Baggage:</h4>
+      <h4><img src="{% static 'travel_site_img/cabin.png'%}" width="45px">Cabin:7kg</h4>
+      <h4><img src="{% static 'travel_site_img/bag.png'%}" width="45px">Check-in:15kg</h4>
+    </td>
+    </tr>
+    </table>
+  </section>
+</body>
+
+</html>

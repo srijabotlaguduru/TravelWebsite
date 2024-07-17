@@ -1,0 +1,106 @@
+    {%load static%}
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static 'style2.css'%}">
+    </head>
+    <style>
+        div.caption {
+            position: absolute;
+            top: 10%;
+            left: 150%;
+        }
+    </style>
+
+    <body>
+        <header>
+            <nav>
+                <div class="navdec1">
+                    <div class="navdecchild"><img src="{%static 'travel_site_img/logo.jpg'%}" alt="" width="100px" style="margin-right: 0rem;"></div>
+                    <div class="navdecchild"><a class="navitems" href="">HOME</a></div>
+                    <div class="navdecchild"><a class="navitems" href="#overview">OVER VIEW</a></div>
+                    <div class="navdecchild"><a class="navitems" href="#packages">PACKAGES</a></div>
+                </div>
+            </nav>
+        </header>
+        <div class="main">
+            <div class="main_v">
+                <video aria-hidden="true" width="100%" height="100%" poster="" preload="auto" playsinline="" loop=""
+                    autoplay="" muted="">
+                    <source src="{%static 'travel_site_img/goa.mp4'%}" type="video/mp4">
+                </video>
+            </div>
+            <div class="main_t">
+                <h1 style="text-align: center; color: white;">GOLDEN PACKAGE</h1>
+                <p style="color:white">Discover the world on a budget with our affordable tourism package. Enjoy comfortable accommodations in budget-friendly hotels without compromising on quality. Experience local culture, visit popular attractions, and savor delicious cuisine while keeping your expenses in check.</p>
+            </div>
+            <div class="main_t2">
+                <h1 style="color: #4299ae">Explore our places</h1>
+                <p style="color: #4299ae">Goa is a coastal paradise in India known for its pristine beaches, vibrant nightlife, and Portuguese colonial architecture. Shimla, nestled in the Himalayas, is a picturesque hill station offering breathtaking views, colonial charm, and opportunities for trekking and skiing. Varanasi, one of the oldest inhabited cities in the world, is a spiritual hub along the banks of the sacred Ganges River, renowned for its ancient temples, spiritual rituals, and mesmerizing Ganga Aarti ceremonies.</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="goa">
+            <div class="heading">
+                <h1 style="color:#4299ae;">Goa</h1>
+            </div>
+            <div class="content">
+                <div class="goa_pic">
+                    <img src="{%static 'travel_site_img/goa.jpg'%}" alt="" width="600px">
+                </div>
+                <div class="goa_t" style="width:50%">
+                    <h1 style="color:#4299ae; text-align: center;">Explore Goa</h1>
+                    <p style="color: #4299ae;">This package provides you beautiful and historic places to visit in goa at an appordable price. We assure your trip to be memorable. Your trip will be consisting of visit to caves,gardens and captivating sights of sunsets at the beaches.We'll provide you a guide at every place,and we'll look after the flight,hotel and place bookings </p>
+                    <p style="text-align: center;"><a href= "goa" style="text-decoration: none;"><input type="button" value="VIEW PLAN" class="planbtn"></a></p>
+                </div>
+            </div>
+        </div>
+        <hr style="border:1px solid #4299ae;">
+
+        <div class="goa2">
+            <div class="heading">
+                <h1 style="color:#4299ae;">VARANASI</h1>
+            </div>
+            <div class="content">
+                <div class="goa_pic">
+                    <img src="{%static 'travel_site_img/varanasi.jpg'%}" alt="" width="600px">
+                </div>
+                <div class="goa_t" style="width:50%">
+                    <h1 style="color:#4299ae; text-align: center;">Explore varanasi</h1>
+                        <p style="color: #4299ae;">Varanasi, also known as Banaras or Kashi, is a city in the northern Indian state of Uttar Pradesh. It is considered one of the holiest cities in Hinduism and attracts millions of tourists and pilgrims every year.</p>
+                        <p style="text-align: center;"><a href= "varanasi" style="text-decoration: none;"><input type="button" value="VIEW PLAN" class="planbtn"></a></p>
+                    
+                </div>
+            </div>
+        </div>
+        <hr style="border:1px solid #4299ae;">
+        
+        <div class="goa2">
+            <div class="heading">
+                <h1 style="color:#4299ae;">SHIMLA</h1>
+            </div>
+            <div class="content">
+                <div class="goa_pic">
+                    <img src="{%static 'travel_site_img/shimla.jpg'%}" alt="" width="600px">
+                </div>
+                <div class="goa_t" style="width:50%">
+                    <h1 style="color:#4299ae; text-align: center;">Explore shimla</h1>
+                        <p style="color: #4299ae;">
+                            Shimla, the capital city of Himachal Pradesh, is a popular hill station known for its scenic beauty, colonial architecture, and pleasant weather.Shimla and its surrounding areas are known for adventure and nature activities. Tourists can engage in activities like trekking, camping, skiing (in winter), horse riding, and exploring nature trails.</p>
+                            <p style="font-family: Helvetica, sans-serif;text-align: center;"><a href= "shimla" style="text-decoration: none;"><input type="button" value="VIEW PLAN" class="planbtn"></a></p>
+                </div>
+            </div>
+        </div>
+        <hr style="border:1px solid #4299ae;">
+        
+    </body>
+
+    </html>

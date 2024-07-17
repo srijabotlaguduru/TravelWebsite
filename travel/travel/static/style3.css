@@ -1,0 +1,269 @@
+@font-face{
+    font-family: 'Bebas';
+    src:url('BebasNeue-Regular.ttf')
+}
+@font-face{
+  font-family: 'Abel';
+  src:url('Abel-Regular.ttf')
+}
+
+
+div.main{
+  position: relative;
+  width: 98vw;
+  height: auto;
+  display:flex;
+}
+div.main_v{
+    width:100%;
+    height:auto;
+    position: relative;
+}
+div.main_t{
+  background-color:#4299ae;
+  position: absolute;
+
+  right: 55%;
+  top:80%;
+  width: 400px;
+  /* margin-left: 30rem; */
+  padding: 5rem;
+}
+
+  div.main_t2{
+    width:500px;
+
+    position:absolute;
+    right:10%;
+    top:105%;
+  }
+
+.main_t h1 , .goa_t h1 , .main_t2 h1 ,.plan h1{
+  font-family:"Bebas";
+  font-size: 2.5rem;
+  
+}
+.main_t p , .main_t2 p ,.goa_t p{
+  font-family: "Abel";
+  font-size: 1.5rem;
+}
+
+div.caption{
+    position:absolute;
+}
+div.navdec1 {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+  div.navdecchild {
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+  }
+/* GOA */
+.goa{
+  padding: 3rem;
+  position: relative;
+
+  margin-top: 400px;
+}
+.goa2{
+  padding: 3rem;
+  position: relative;
+
+  margin-top: 100px;
+}
+
+h1{
+  font-family: "Bebas";
+  font-size:3rem;
+  /* margin-top: 500px; */
+}
+div.heading{
+  text-align: center;
+}
+div.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goa_pic{
+  height:auto;
+}
+.goa_t{
+  width:300px;
+  background-color: white;
+  padding: 2rem;
+}
+
+  a.navitems {
+    text-decoration: none;
+    color: #4299ae;
+    font-weight: 700;
+  }
+
+  a.navitems:hover {
+    color: black;
+    transition: color 300ms linear;
+  }
+
+  .caption h1{
+    font-family: 'Bebas';
+    color: white;
+    font-size: 3rem;
+
+  }
+  /*  Plan  */
+ 
+  .subplan{
+    position: relative;
+    display:flex;
+    
+  }
+  .card{
+    width:50px;
+    border-radius: 5px;
+    background-color: cornsilk;
+    padding:1rem;
+    border: 2px solid #4299ae;
+
+
+  }
+  .travel{
+    position:relative;
+    display: flex;
+    background-color: white;
+    margin:0rem;
+  }
+  .home .palm{
+
+    height:auto;
+  }
+  .plan h1{
+    font-size: 1.7rem;
+  }
+
+
+  .picsec{
+    padding: 2rem 7rem;
+  }
+  .picsec img{
+    border-radius: 9px;
+    margin-right: 9px;
+  }
+  .pictures{
+    position: relative;
+    display:flex;
+    justify-content: center;
+  }
+  .background{
+    margin-top: 4rem;
+    background-color: cornsilk;
+    padding:5rem 4rem;
+  
+  }
+  .overview{
+    padding: 3rem;
+
+  }
+  .plansec1{
+    background-color: white;
+    position: relative;
+    justify-content: center;
+    display: flex;
+    margin-left: 5rem;
+    padding:3rem;
+  }
+  .planopt{
+    background-color:rgb(123, 230, 234);
+    margin-left: 5rem;
+  }
+  .btn{
+    border-radius: 2px;
+    color: aqua;
+    padding-left: 3rem;
+
+  }
+
+  .travel{
+    position:relative;
+    display: flex;
+    background-color: white;
+    margin:0rem;
+  }
+  .home .palm{
+
+    height:auto;
+  }
+  .main_p td{
+    padding:4rem;
+  }
+
+.navdec2{
+  background-color:#4299ae;
+}
+div.navdec2 {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+div.navde2cchild {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  font-family:sans-serif;
+  text-decoration: none;
+  margin-left: 7rem;
+}
+.map{
+  margin:20rem 5rem;
+}
+.cost{
+
+    margin:5rem 5rem;
+    padding:1rem;
+
+  }
+  .cost2{
+    height:auto;
+    width:400px;
+    text-align: center;
+    height: 300px;
+    border:1px solid grey;
+
+
+  }
+  .cost_sub1{
+    background-color: rgb(228, 216, 216);
+    padding: 0.5rem 2rem;
+    
+  }
+  .cost_sub2{
+    border:1px solid grey;
+  }
+  .summary table{
+    border:1px solid black;
+    border-radius:4px;
+   
+    
+  }
+  .summary td{
+    padding-right:40px;
+    border-left:none;
+    border:1px solid black;
+    
+  }
+ 
+ 

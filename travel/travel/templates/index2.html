@@ -1,0 +1,234 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asian Travels</title>
+</head>
+<link rel="stylesheet" href="{%static 'style.css'%}">
+<style>
+  #hello {
+      color: #4299ae;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+      font-size: 1rem;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+  <header>
+
+    <nav>
+      <ul class="navdec">
+        <li style="float:left">
+          <button> <img src="{% static 'travel_site_img/logo.jpg'%}" alt="logo" style="height:50px; width:140px"></button>
+        </li>
+
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'logout' %}">Logout</a></li>
+          <li id="hello">Hello {{user.username}}</li>
+            {% else %}
+          <li><a href="{% url 'login' %}">Login</a></li>
+            {% endif %}
+        <li><a href="#reviews">REVIEWS</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        
+        <li>
+          <div class="menu">
+            <button class="dropButton" style="color: #4299ae;">COUNTRIES</a>
+              <div class="drpbtn">
+                <a href="#India">India</a>
+                <a href="#Japan">Japan</a>
+                <a href="#Singapore">Singapore</a>
+              </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section>
+    <div class="background">
+
+      <!-- <div style="font-family:Satisfy,cursive;"class="caption">
+        PLAN YOUR NEXT TRIP
+      </div>
+      <br> -->
+      <!--<p
+        style="color: aliceblue; text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        Make your tour amazing with us</p>
+
+      <button class="button">Learn more</button>-->
+      <p class="mainhead">Plan your trip with us</p>
+    </div>
+
+  </section>
+  <section>
+    <div class="abtus" id="about">
+
+      <h1 style="text-align: center; font-size: 3rem;">About us</h1>
+      <p>
+        Welcome to our tourism website! We are dedicated to providing you with an unforgettable travel experience and
+        helping you explore the world's most captivating destinations. Here's some information about us:
+
+
+      <h1>Who We Are:</h1>
+
+      <p>We are a passionate team of travel enthusiasts who believe in the transformative power of travel. With our
+        extensive knowledge and expertise, we aim to curate exceptional travel experiences tailored to your preferences
+        and interests.</p>
+
+
+      <h1>What We Offer:</h1>
+
+      <p> We offer a comprehensive range of travel services to cater to your every need. Our website provides a
+        user-friendly platform where you can search and compare flights, hotels, vacation packages, and activities. We
+        collaborate with trusted partners to ensure that you have access to the best deals and a wide selection of
+        options.</p>
+
+
+      <h1>Why Choose Us:</h1>
+
+
+      <p>Personalized Experiences: We understand that every traveler is unique. Our team is dedicated to crafting
+        personalized itineraries that align with your preferences, ensuring that your trip is tailored to your specific
+        interests and requirements.</p>
+      <p>
+
+        Expert Guidance: Our travel experts are well-versed in various destinations and can provide invaluable advice
+        and recommendations to help you make informed decisions. From suggesting off-the-beaten-path attractions to
+        providing insider tips, we are here to enhance your travel experience.</p>
+
+
+
+    </div>
+  </section>
+  <section>
+    <div class="background2">
+      <div class="banner2">
+        <h1 style="text-align: center; color: var(rgb(35, 168, 225))">Featured Destinations</h1>
+        <br>
+        <table class='outertable' style="padding-bottom: 1rem;">
+          <tr>
+            <td>
+              <a href="india" style="text-decoration: none;">
+                <table class="innertable">
+                  <td>
+
+                    <div class="card" id="India">
+                      <img src="{% static 'travel_site_img/carousel1_1.jpg'%}" alt="Avatar" style="width:300px">
+                  </td>
+                  <td>
+                    <span class="container">
+                      <h4 style="text-align: center;"><b>India</b></h4>
+                      <h5 style="text-align: center;">Land of Diversity</h5>
+                      <p>India, known as the land of diversity, is a captivating country that enchants visitors with its
+                        rich history, vibrant culture, and breathtaking landscapes. </p>
+                    </span>
+                  </td>
+                </table>
+              </a>
+            </td>
+          </tr>
+          <tr style="margin-bottom: 7rem;">
+            <td>
+              <a href="japan" style="text-decoration: none;">
+                <table class="innertable">
+                  <td>
+
+                    <div class="card" id="Japan">
+                      <img src="{% static 'travel_site_img/carousel1_2.jpg'%}" alt="Avatar" style="width:300px">
+                  </td>
+                  <td>
+                    <span class="container">
+                      <h4 style="text-align: center;"><b>Japan</b></h4>
+                      <h5 style="text-align: center;">Land of the Rising Sun</h5>
+                      <p>Japan, an island nation in East Asia, is known for its technological
+                        advancements, and stunning natural landscapes. From the bustling streets of Tokyo to the serene
+                        temples of Kyoto, Japan offers a unique blend of tradition and modernity, captivating visitors
+                        with its ancient traditions. </p>
+                    </span>
+                  </td>
+                </table>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="singapore" style="text-decoration: none;">
+                <table class="innertable">
+                  <td>
+
+                    <div class="card" id="Singapore">
+                      <img src="{% static 'travel_site_img/carousel1_3.jpg'%}" alt="Avatar" style="width:300px">
+                  </td>
+                  <td>
+                    <span class="container">
+                      <h4 style="text-align: center;"><b>Singapore</b></h4>
+                      <h5 style="text-align: center;">Land of Lion</h5>
+                      <p>Singapore is a thriving city-state in Southeast Asia known for its modern infrastructure,
+                        efficient governance, and vibrant multicultural society.</p>
+                    </span>
+                  </td>
+                </table>
+              </a>
+            </td>
+          </tr>
+
+        </table>
+
+
+      </div>
+    </div>
+  </section>
+  <!--Happy clients-->
+  <section id="reviews">
+    <div class="clients">
+      <h1 style="color: white; text-align: CENTER;">Our Happy Clients</h1>
+      <table style="align-items: center; padding:3rem">
+        <tr>
+          <td>
+            <div class="card1" style="text-align: center;">
+              <img class="client-photo" src="{% static 'travel_site_img/manasa.jpeg'%}">
+              <p><br><br>"I recently used this tourism website to plan my family vacation, and I couldn't be happier
+                with the experience. The website was easy to navigate, and I found everything I needed to plan our trip.
+                The booking process was seamless, and the customer service was excellent. Our vacation was a dream come
+                true, thanks to this website!" - <br>Manasa.V.<br><br><br> </p>
+            </div>
+          </td>
+          <td>
+            <div class="card1" style="text-align: center;">
+              <img class="client-photo" src="{% static 'travel_site_img/aish_5.jpg'%}">
+              <p>"I highly recommend this tourism website for anyone looking to book their next adventure. The website
+                offers a wide range of destinations and activities to choose from, and the search filters made it easy
+                to find exactly what I was looking for. The booking process was straightforward, and I received instant
+                confirmation. The customer support team was responsive and helpful throughout the entire process. I had
+                an amazing trip, and I will definitely use this website again!" -<br>
+                 Aishwarya.N <br><br></p>
+            </div>
+          </td>
+          <td>
+            <div class="card1" style="text-align: center;">
+              <img class="client-photo" src="{% static 'travel_site_img/srija.jpeg'%}">
+
+              <p> <br>"I stumbled upon this tourism website while planning a last-minute getaway, and I'm so glad I did.
+                The website had a wide selection of options, even for spontaneous travelers like me. I found a fantastic
+                deal on a hotel and flight package, and the booking process was quick and hassle-free. The website's
+                recommendations for local attractions and restaurants were spot-on, and I had an incredible vacation. I
+                will definitely be using this website again for my future travels!" - <br>Srija.B </p>
+            </div>
+          </td>
+
+        </tr>
+      </table>
+
+    </div>
+  </section>
+</body>
+
+
+</html>

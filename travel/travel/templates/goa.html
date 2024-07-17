@@ -1,0 +1,404 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'style3.css'%}">
+
+</head>
+<style>
+    h1 {
+    color: #333;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    margin-left: 5rem;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .popup {
+    width: 400px;
+  height: 300px;
+  background-color: rgb(203, 225, 203);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  }
+  
+  .popup h2 {
+    color: rgb(183, 156, 156);
+    size: 5rem;
+  }
+  
+
+  .popup b {
+    color: #777;
+    font-size: 1.5rem;
+  }
+  .inner_b{
+    margin: 10rem;
+  }
+</style>
+
+<body>
+  <header>
+    <nav>
+      <div class="navdec1">
+        <div class="navdecchild"><img src="{% static 'travel_site_img/logo.jpg'%}" alt="" width="100px" style="margin-right: 0rem;">
+        </div>
+        <div class="navdecchild"><a class="navitems" href="index2.html">HOME</a></div>
+        <div class="navdecchild"><a class="navitems" href="goldenpackage.html">PACKAGE</a></div>
+        <div class="navdecchild"><a class="navitems" href="#plan">PLAN</a></div>
+      </div>
+    </nav>
+  </header>
+  <section>
+    <div class="picsec">
+      <h2 style="font-size: 40px; font-family:Lato, Arial, sans-serif; padding-left:4rem">Amazing Goa flight inclusive Deal 3N
+      </h2>
+      <h2 style="font-size: 28px; font-family: sans-serif; padding-left:4rem">&#8377 8000 per person</h2>
+      <table>
+        <tr>
+          <td> <img src="{% static 'travel_site_img/destination.jpg'%}" alt="" height="40px" style="position:relative;padding-left:3.3rem">
+            <span style="font-size: 22px; font-family: sans-serif; position: absolute;">Goa</span></td>          
+          <td><button style="position:relative;" name="myButton" id="myButton">CHECK WEATHER </button><div id="weather" style="padding-left: 6rem;"></div></td>
+        </tr>
+      </table>
+ 
+      
+      <div class="pictures">
+        <img src="{% static 'travel_site_img/goa_museum.jpg'%}" alt="" width="30%" HEIGHT="400px">
+        <img src="{% static 'travel_site_img/goa_2.jpg'%}" alt="" width="30%" height="400px">
+        <!--<div class="centerimg" width="40%">
+          <img src="{% static 'travel_site_img/goa_2.jpg" alt="" width="100%" height="30%">
+          <img src="{% static 'travel_site_img/goa_3.jpg" alt="" width="100%" height="30%">
+        </div>-->
+        <img src="{% static 'travel_site_img/goa_1.jpg'%}" alt="" width="30%" HEIGHT="400px" style="margin-left: 9px;">
+      </div>
+
+    </div>
+  </section>
+  <section>
+    <div>
+      <h2 style="font-size: 40px; font-family:Lato, Arial, sans-serif;margin-left:9.5rem ">About Package</h2>
+      <div style="display:flex;justify-content:stretch;margin-left: 6rem;">
+        <p style="padding-left: 4rem;padding-right: 3rem;font-size:22px;font-family: Arial, Helvetica, sans-serif; width: 60%;text-align: justify;">Book you lucrative tour
+          package of Goa for 3 Nights, 4 Days offered by
+          Asian Travels at 4,200 /Per Person . Find detailed day wise
+          itinerary of Goa tour package below which will be further customized once you enquire with us and share you
+          trip
+          details.
+          Goa is a state in western India with coastlines stretching along the Arabian Sea. Its long history as a
+          Portuguese colony prior to 1961 is evident in its preserved 17th-century churches and the area’s tropical
+          spice
+          plantations. </p>
+        <div style="width:40%;height: 300px;">
+          <div class="cost2">
+            <div class="cost_sub1">
+              <h2 style="font-size: 28px; font-family: sans-serif;">&#8377 8000</h2>
+              <h2 style="font-size: 28px; font-family: sans-serif;">/per person</h2>
+              <h2 style=" font-size: 28px; font-family: sans-serif;color:ash">*Excluding Applicable taxes</h2>
+
+            </div>
+            <div class="cost_sub2" style="position:relative;display:flex">
+              <img src="{% static 'travel_site_img/time.jpeg'%}" height="40px" alt="" style="position:absolute;">
+              <h2 style="font-size: 28px; font-family: sans-serif;position:absolute; right:30%; top:-10px">3 Nights / 4 Days</h2><span>
+                <a style="text-decoration: none;" href="{%url 'try'%}"><input type="button" value="Book" style="font-size: 28px; font-family: sans-serif;position:absolute;top:70px ;right:40% ;background-color:rgb(47, 228, 47);"></a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding:4rem 9.5rem;" class="summary">
+      <table>
+        <tr>
+          <td colspan="4" style="font-size:22px;text-align:centre;background-color:rgb(147, 188, 249)">Package Summary</td>
+        </tr>
+        <tr id="table1">
+          <td style="color:blue;font-size:18px">Day1</td>
+          <td><img src="{% static 'travel_site_img/car.png'%}" width="45px">Arrival </td>
+          <td><img src="{% static 'travel_site_img/visit.jpeg'%}" width="45px"> visit to north goa</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">Dinner at Hotel</td>
+        </tr>
+        <tr>
+          <td style="color:blue;font-size:18px">Day2</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">Breakfast</td>
+          <td><img src="{% static 'travel_site_img/visit.jpeg'%}" width="45px"> visit to South goa</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">Dinner at Hotel</td>
+        </tr>
+        <tr>
+          <td style="color:blue;font-size:18px">Day3</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">Breakfast</td>
+          <td><img src="{% static 'travel_site_img/visit.jpeg'%}" width="45px"> temple and museum visit</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">Dinner at Hotel</td>
+        </tr>
+        <tr>
+          <td style="color:blue;font-size:18px">Day4</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">Breakfast</td>
+          <td><img src="{% static 'travel_site_img/car.png'%}" width="45px">Departure</td>
+        </tr>
+      </table>
+    </div>
+    <div style="margin-left: 9.5rem;" id="plan">
+      <h2 style="font-size: 40px; font-family:Lato, Arial, sans-serif;">Detailed Daywise itenerary</h2>
+    </div>
+    <div id="overview">
+      <table style="margin-left:9.5rem; width: 80vw; background-color: azure;">
+        <tr>
+          <td>
+            <div class="main_p">
+              <h3 style="font-size: 30px; font-family:Lato, Arial, sans-serif;" >Day 1 - Arrival in Goa </h3>
+              <h3 style="color:blue;font-size:18px">CHECKIN @ 2PM</h3>
+              <div class="hotel">
+                <h2 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Radisson Blu Resort</h2>
+                <img src="{% static 'travel_site_img/hotel.webp'%}" alt="" width="300px">
+
+
+              </div>
+
+
+            </div>
+          </td>
+          <td style="margin-top:40em;">
+            <h3><a>INCLUDED: <img src="{% static 'travel_site_img/pla.png'%}" style="width:45px"> 1 flight | <img
+                  src="{% static 'travel_site_img/hotel.jpeg'%}" width="45px"> Hotel | <img src="{% static 'travel_site_img/car.png"
+                  width="45px"> 1 Transfer</a></h3>
+            <h3 style="color:blue;font-size:25px">Car service provided to hotel- 1hr</h3>
+            <h4>Baggage:</h4>
+            <h4><img src="{% static 'travel_site_img/cabin.png'%}" width="45px">Cabin:7kg</h4>
+            <h4><img src="{% static 'travel_site_img/bag.png'%}" width="45px">Check-in:15kg</h4>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <h3 style="font-size:22px;font-family: Arial, Helvetica, sans-serif">On reaching Goa, meet our representative at airport/railway station/Bus Station who will drop you at
+              hotel.In hotel while you the check-in formalities, take some rest for the day and then start driving
+              towards North Goa. North Goa is dotted with some of the most beautiful beaches of Goa Fort Aguada
+              Sinquerim beach Calangute beach Baga Beach Anjuna Beach</h3>
+          </td>
+          <td style="margin-left:20rem">
+            <br>
+            <br>
+
+          </td>
+
+        </tr>
+
+
+        <tr>
+          <td>
+            <h2 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Beaches In North Goa</h2>
+          </td>
+        </tr>
+        <tr>
+
+          <td>
+
+            <img src="{% static 'travel_site_img/calangute.jpeg'%}" alt="" width="300px" height="150px">
+            <p>CALANGUTE BEACH</p>
+          </td>
+          <td>
+
+            <img src="{% static 'travel_site_img/anjuna beach.jpeg'%}" alt="" width="300px" height="150px">
+            <p>ARJUNA BEACH</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">END OF THE DAY</h2>
+          </td>
+        <tr>
+          <td colspan="2">
+            <hr>
+          </td>
+        </tr>
+        </tr>
+
+
+        <tr>
+          <td>
+            <h3 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Day 2 - Visit South Goa </h3>
+            <h2><a><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">BREAKFAST </a></h2>
+
+            <img src="{% static 'travel_site_img/goa_museum.jpg'%}" alt="" width="300px">
+          </td>
+          <td style="margin-left:20rem">
+            <h3 style="font-size:22px;font-family: Arial, Helvetica, sans-serif">Today morning post breakfast proceed to explore South Goa today:- Old Goa church's (Bom Jesus Basilica /
+              Se Cathedral) Mangeshi Balaji temple's Panaji city tour ( Miramar, Dina Paula , Balaji Temple ) Later
+              return back by evening and stay overight at the hotel.</h3>
+          </td>
+        <tr>
+          <td>
+            <h2 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Places To Visit In South Goa</h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+
+            <img src="{% static 'travel_site_img/secath.jpg'%}" alt="" width="300px" height="150px">
+            <p>SE Cathedral</p>
+          </td>
+          <td>
+
+            <img src="{% static 'travel_site_img/miramar.jpg'%}" alt="" width="300px" height="150px">
+            <p>MIRAMAR BEACH</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">END OF THE DAY</h2>
+          </td>
+
+        </tr>
+        <tr>
+          <td colspan="2">
+            <hr>
+          </td>
+        </tr>
+        <tr>
+
+          <td>
+            <h3 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Day 3 </h3>
+            <!--<h2><a><img src="{% static 'travel_site_img/bf.jpg" width="45px">BREAKFAST </a></h2>-->
+            <h3 style="color:blue;font-size:25px"> Day-3 Morning @ 10</h3>
+            <img src="{% static 'travel_site_img/goa_museum.jpg'%}" alt="" width="300px">
+            <p>GOA MUSEUM</p>
+          </td>
+          <td>
+            <h3 style="color:blue;font-size:25px">Afternoon @ 2:30pm</h3>
+            <img src="{% static 'travel_site_img/maha.jpeg'%}" alt="" width="350px">
+            <p>MAHADEV TEMPLE</p>
+
+          </td>
+        </tr>
+       <tr>
+              <td>
+                <h2 style="font-size: 30px; font-family:Lato, sans-serif">END OF THE DAY</h2>
+              </td>
+            <tr>
+              <td colspan="2">
+                <hr>
+              </td>
+            </tr>
+            </tr>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h3 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Day 4-Departure From Goa </h3>
+
+
+            <div class="home" style="width:75%">
+              <img src="{% static 'travel_site_img/plane.jpg'%}" alt="" width="250px">
+            </div>
+
+
+
+    </div>
+    </td>
+    <td style="margin-left:20rem">
+      <h3><a>INCLUDED: <img src="{% static 'travel_site_img/pla.png'%}" width="45px"> 1 flight | <img src="{% static 'travel_site_img/car.png"
+            width="45px"> 1 Transfer</a></h3>
+      <h4>Baggage:</h4>
+      <h4><img src="{% static 'travel_site_img/cabin.png'%}" width="45px">Cabin:7kg</h4>
+      <h4><img src="{% static 'travel_site_img/bag.png'%}" width="45px">Check-in:15kg</h4>
+    </td>
+    </tr>
+    </table>
+  </section>
+</body>
+<script>
+  // Function to make the Ajax request
+  function getWeather(city) {
+    // Replace 'YOUR_API_KEY' with your actual API key from OpenWeatherMap
+    const apiKey = '47d61635ca3090e2a995d30d9078c800';
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+    // Create a new XMLHttpRequest object
+    const xhr = new XMLHttpRequest();
+
+    // Set up the request
+    xhr.open('GET', url, true);
+
+    // Define the callback function
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        // Parse the JSON response
+        const response = JSON.parse(xhr.responseText);
+
+        // Extract the relevant weather data
+        const temperature = response.main.temp;
+        const weatherDescription = response.weather[0].description;
+
+        // Display the weather information
+        const weatherElement = document.getElementById('weather');
+
+
+        var popup = window.open("", "Popup", "width=400,height=300");
+
+    // Customize the content of the pop-up window
+    var popupContent = "<html><head><style>" + 
+                      document.querySelector("style").innerHTML +
+                      "</style></head><body position='absolute' class='inner_b'><div class='popup'>" +
+                      "<h2>WEATHER CONDITIONS</h2>" +
+                      `<b>Temperature: ${temperature} K </b><br> <br><b>Weather: ${weatherDescription} </b>` +
+                      "</div></body></html>";
+    popup.document.open();
+    popup.document.write(popupContent);
+    popup.document.close();
+
+        
+      }
+    };
+
+    // Send the request
+    xhr.send();
+  }
+  
+  // Call the function with the desired city
+  document.getElementById('myButton').addEventListener('click', function() {
+  getWeather('Goa');
+});
+
+
+function showPopup() {
+    // Create the pop-up window
+    var popup = window.open("", "Popup", "width=400,height=300");
+
+    // Customize the content of the pop-up window
+    popup.document.write("<h2>Popup Window</h2>");
+    popup.document.write("<p>This is a pop-up window content.</p>");
+
+    // Prevent the pop-up window from navigating away
+    popup.document.close();
+  }
+</script> 
+
+</html>

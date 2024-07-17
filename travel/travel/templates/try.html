@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+td,tr{
+  margin:2rem;
+  height: 20px;
+  position: relative;
+
+}
+.warning{
+  color: red;
+  font-size: 1rem;
+  position: absolute;
+  bottom: -20px;
+  left:-33px;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 50px 100px;
+    font-size: 17px;
+    padding: 10px;
+}
+.container{
+    background-color: #f2f2f2;
+    padding: 5px 100px 5px 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select{
+    width: 50rem;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 350px;
+}
+
+.main-heading{
+    text-align: center;
+}
+input[type="button"]{
+    background-color: #4dac4d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+.registration-form{
+  height:600px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-heading">BOOK MY TRIP</h1>
+        <form name="registration" class="registartion-form">
+          <table>
+            <tr>
+              <td><label for="name">Name:</label></td>
+              
+              <td><input type="text" id="name" value=""></td>
+            </tr>
+            <tr><td id="checkname" class="warning"></td></tr>
+            <tr>
+              <td><label for="email">Email:</label></td>
+            
+              <td><input type="email" id="myEmail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"></td>
+            </tr>
+            <tr><td id="checkmail" class="warning"></td></tr>
+            
+            <tr>
+              <td><label for="phoneNumber">Phone Number:</label></td>
+              
+              
+              <td><input type="number" id="phoneNumber"> </td>
+            </tr>
+            <tr><td id="phnocheck" class="warning"></td></tr>
+                <tr>
+                    <td><label for="country">COUNTRY</label></td>
+                    
+                    <td>
+                    
+                      <select name="COUNTRY" id="language">
+                        <option value="">--select a country--</option>
+                        <option value="INDIA">INDIA</option>
+                        <option value="SINGAPORE">SINGAPORE</option>
+                        <option value="JAPAN">JAPAN</option>
+                    </select>
+                    </td>
+                  </tr>
+            
+            <tr><td id="countrycheck" class="warning"></td></tr>
+            <tr>
+              <td><label for="package">PACKAGE</label></td>
+              <td>
+                <select name="package" id="package">
+                    <option value="">--select a package--</option>
+            <option value="GOLD">GOLD</option>
+            <option value="EMERALD">EMERALD</option>
+            <option value="DIAMOND">DIAMOND</option>
+        </select>
+              </td>
+            </tr>
+            <tr><td id="packagecheck" class="warning"></td></tr>
+
+            <tr>
+              <td><label for="place">Place:</label></td>
+              
+              <td><input type="text" id="place" value=""></td>
+            </tr>
+            <tr><td id="checkplace" class="warning"></td></tr>
+            <tr>
+
+              <td><label for="per">No Of Persons:</label></td>
+              <td><input type="number" name="per" id="per"></td>
+            </tr>
+            <tr><td id="checkppl" class="warning"></td></tr>
+            <tr>
+              <td><label for="in">CHECKIN:</label></td>
+              <td><input type="date" name="in"></td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+              <td colspan="2"><input type="button" value="PAY NOW" onclick="validate()"></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+</body>
+<script>
+  function validate(){
+    if (myfunction()){
+      console.log("Fucntion executed")
+      
+      window.open("{%url 'form'%}","_self")
+    }
+    else{
+      
+    }
+  }
+
+
+  function myfunction(){
+    let nam = document.getElementById("name").value
+    var mail=document.getElementById("myEmail").value
+    var phno=document.getElementById("phoneNumber").value
+    var package=document.getElementById("package").value
+    var country=document.getElementById("language").value
+    var noppl=document.getElementById("per").value
+    let placee = document.getElementById("place").value
+    let text=[];
+    text=name(nam)
+    document.getElementById("checkname").innerHTML=text[0]
+    value1= text[1]
+    text=email(mail)
+    document.getElementById("checkmail").innerHTML=text[0]
+    value2= text[1]
+    text=phoneno(phno)
+    document.getElementById("phnocheck").innerHTML=text[0]
+    value3= text[1]
+    text=countr(country)
+    document.getElementById("countrycheck").innerHTML=text[0]
+    value4= text[1]
+    text=packag(package)
+    document.getElementById("packagecheck").innerHTML=text[0]
+    value5= text[1]
+    text=ppl(noppl)
+    document.getElementById("checkppl").innerHTML=text[0]
+    value6= text[1]
+    text=pla(placee)
+    document.getElementById("checkplace").innerHTML=text[0]
+    value7= text[1]
+
+    function name(inputxt){
+      if (inputxt.length>=3){
+      text[0]="";
+      text[1]="False"
+    }
+    else{
+      text[0]="Enter valid name";
+      text[1]="True"
+
+    }
+    return text
+    }
+    function pla(inputxt){
+      if (inputxt.length>=1){
+      text[0]="";
+      text[1]="False"
+    }
+    else{
+      text[0]="Enter place";
+      text[1]="True"
+
+    }
+    return text
+    }
+
+    function email(inputtxt) {
+        var pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$";
+        if(inputtxt.match(pattern)) {
+            text[0] = "";
+            text[1]="False"
+
+            
+      } else {
+        text[0]="Please enter a valid email";
+        text[1]="True"
+    }
+    return text
+
+  }
+  function phoneno(inputtxt) {
+        var pattern=/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        if(inputtxt.match(pattern)) {
+            text[0] = "";
+            text[1]="False"
+            
+      } else {
+        text[0]="Please enter a valid number";
+        text[1]="True"
+        
+    }
+    return text
+
+  }
+  function countr(inputxt){
+    if(inputxt ==""){
+      text[0]="Please select a country"
+      text[1]="True"
+    }
+    else{
+      text[0]=""
+      text[1]="False"
+      
+    }
+    return text
+  }
+  function packag(inputxt){
+    if(inputxt ==""){
+      text[0]="Please select a package"
+      text[1]="True"
+    }
+    else{
+      text[0]=""
+      text[1]="False"
+    }
+    return text
+  }
+  function ppl(inputxt){
+    if (inputxt==""){
+      text[0]="Please select no of ppl"
+      text[1]="True"
+    }
+    else{
+      text[0]=""
+      text[1]="False"
+    }
+    return text
+  }
+  if (value1&&value2&&value3&&value4&&value5&&value6&&value7=="False"){
+    console.log("vjrfhv")
+    return true
+
+  }
+  else{
+    console.log("manasa")
+
+    return false
+  }
+
+}
+
+</script>
+</html>

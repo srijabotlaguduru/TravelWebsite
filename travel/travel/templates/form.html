@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Payment</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 50px 400px;
+        font-size: 17px;
+        padding: 10px;
+    }
+
+    .container {
+        background-color: #f2f2f2;
+        padding: 5px 20px 15px +20px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px;
+    }
+
+    fieldset {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        width: 100%;
+    }
+
+    .main-heading {
+        text-align: center;
+    }
+
+    input[type="button"] {
+        background-color: #4dac4d;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .warning {
+        color: red;
+        font-size: 1rem;
+        position: absolute;
+        left:430px;
+        
+    }
+    .label{
+        position: relative;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <form action="" , method="get">
+            <h1 class="main-heading">Credit card payment</h1>
+            <hr>
+            <h2>Contact Information</h2>
+         
+            
+            <p class="label">   <p id="checkname" class="warning"></p><p>&nbsp</p> Card Holder Name: <input type="text" placeholder="Manasa" id="name" value=""></p>
+            
+            <p class="label"><p id="checkadd" class="warning"></p><p>&nbsp</p>Address:
+                <textarea name="address" id="address" cols="100" rows="8"></textarea>
+            </p>
+             <p class="label"><p id="checktype" class="warning"></p><p>&nbsp</p>Card Type
+            
+                <select name="card_type" id="card_type">
+                    <option value="">--Select a card type</option>
+                    <option value="visa">Visa</option>
+                    <option value="rupay">Rupay</option>
+                    <option value="mastercard">Mastercard</option>
+                </select>
+            </p>
+            <p class="label"><p id="checknum" class="warning"></p><p>&nbsp</p>
+                Card Number <input type="number" name="card_number" id="card_number">
+            </p>
+            <p class="label"><p id="checkdate" class="warning"></p><p>&nbsp</p>
+                Expiration Date: <input type="date" name="exp_date" id="exp_date">
+            </p>
+            <p class="label"><p id="checkcvv" class="warning"></p><p>&nbsp</p>CVV:<input type="number"name="cvv" id="cvv" value="">
+            </p>
+            <p>
+                <input type="button" value="Pay Now" onclick="myfunction()">
+            </p>
+        </form>
+    </div>
+</body>
+<script>
+    function myfunction() {
+        text = []
+        var name = document.getElementById("name").value
+        var address = document.getElementById("address").value
+        var cardtyp=document.getElementById("card_type").value
+        var cardnum=document.getElementById("card_number").value
+        var cvv=document.getElementById("cvv").value
+
+        console.log(cardnum)
+        text = nam(name)
+        document.getElementById("checkname").innerHTML = text[0]
+        value1=text[1]
+        text=add(address)
+        document.getElementById("checkadd").innerHTML=text[0]
+        value2=text[1]
+        text=type(cardtyp)
+        document.getElementById("checktype").innerHTML=text[0]
+        value3=text[1]
+        text=num(cardnum) 
+        document.getElementById("checknum").innerHTML=text[0]
+        value4=text[1]
+        text=cv(cvv)
+        document.getElementById("checkcvv").innerHTML=text[0]
+        value5=text[1]
+
+        function nam(inputxt) {
+            if (inputxt.length < 3) {
+                text[0] = "Enter valid name"
+                text[1] = "False"
+
+            }
+            else {
+                text[0] = ""
+                text[1] = "True"
+
+            }
+            return text
+        }
+        function add(inputxt) {
+            if (inputxt.length < 3) {
+                text[0] = "Enter valid address"
+                text[1] = "False"
+
+            }
+            else {
+                text[0] = ""
+                text[1] = "True"
+
+            }
+            return text
+        }
+        function type(inputxt) {
+  
+            if (inputxt=="") {
+                text[0] = "Select card type"
+                text[1] = "False"
+
+            }
+            else {
+                text[0] = ""
+                text[1] = "True"
+
+            }
+            return text
+        }
+        function num(inputxt) {
+            var pattern=/^\d{16}$/;
+            if (!inputxt.match(pattern)) {
+                text[0] = "Enter valid number"
+                text[1] = "False"
+
+            }
+            else {
+                text[0] = ""
+                text[1] = "True"
+
+            }
+            return text
+        }
+        function cv(cvv){
+            pattern="^[0-9]{3,4}$"
+            console.log(cvv)
+            if (cvv.match(pattern)){
+                text[0]=""
+                text[1]="True"
+                
+            }
+            else{
+                text[0]="Please enter valid CVV"
+                text[1]="False"
+
+            }
+            return text
+        }
+        if (value1 && value2 && value3 && value4 && value5 =="True"){
+            window.open("{%url 'booked'%}","_self")
+        }
+        else{
+
+        }
+
+
+
+    }
+
+
+</script>
+
+</html>

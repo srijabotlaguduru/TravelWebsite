@@ -1,0 +1,107 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style2.css'%}">
+</head>
+<style>
+    div.caption {
+        position: absolute;
+        top: 10%;
+        left: 150%;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="navdec1">
+                <div class="navdecchild"><img src="static/travel_site_img/logo.jpg" alt="" width="100px" style="margin-right: 0rem;"></div>
+                <div class="navdecchild"><a class="navitems" href="index2.html">HOME</a></div>
+                <div class="navdecchild"><a class="navitems" href="#overview">OVER VIEW</a></div>
+                <div class="navdecchild"><a class="navitems" href="#packages">PACKAGES</a></div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="main_v">
+            <video aria-hidden="true" width="100%" height="100%" poster="" preload="auto" playsinline="" loop=""
+                autoplay="" muted="">
+                <source src="temple.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="main_t">
+            <h1 style="text-align: center; color: white;">diamond package</h1>
+            <p style="color:white">                Indulge in the ultimate luxury with our exclusive expensive tourism package. Stay in lavish 5-star accommodations that offer breathtaking views and unparalleled comfort. Enjoy gourmet dining experiences at Michelin-starred restaurants and access VIP events and attractions. This package is designed to provide an unforgettable and extravagant travel experience.</p>
+        </p>
+        </div>
+        <div class="main_t2">
+            <h1 style="color: #4299ae">Explore our places</h1>
+            <p style="color: #4299ae">
+                Mysore, located in the southern part of India, is renowned for its grand Mysore Palace. Amritsar, in the state of Punjab, is home to the iconic Golden Temple, a sacred Sikh pilgrimage site. Darjeeling, nestled in the Himalayas, is known for its tea plantations, scenic mountain views, and the UNESCO World Heritage-listed Darjeeling Himalayan Railway.</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="goa">
+        <div class="heading">
+            <h1 style="color:#4299ae;">mysore</h1>
+        </div>
+        <div class="content">
+            <div class="goa_pic">
+                <img src="{%static 'travel_site_img/mysore.jpg'%}" alt="" width="600px">
+            </div>
+            <div class="goa_t" style="width:50%">
+                <h1 style="color:#4299ae; text-align: center;">Explore mysore</h1>
+                <p style="color: #4299ae;">The city of Mysore is mainly famous for housing magnificent palaces, majestic temples and beautiful gardens. The place is home to a number of festivities like the Dasara Festival, which is known to all. Apart from traditional silk sarees and turbans, this 2nd cleanest city of the country of India attracts tourists for its rich culture and tradition as well as sandalwood products. The quaint charm of the place has always enthralled its visitors.</p>
+                <p style="text-align: center;"><a href= "mysore.html" style="text-decoration: none;"><input type="button" value="VIEW PLAN" class="planbtn"></a></p>
+            </div>
+        </div>
+    </div>
+    <hr style="border:1px solid #4299ae;">
+
+    <div class="goa2">
+        <div class="heading">
+            <h1 style="color:#4299ae;">Amritsar</h1>
+        </div>
+        <div class="content">
+            <div class="goa_pic">
+                <img src="static/travel_site_img/amritsar.jpg" alt="" width="600px">
+            </div>
+            <div class="goa_t" style="width:50%">
+                <h1 style="color:#4299ae; text-align: center;">Explore amritsar</h1>
+                    <p style="color: #4299ae;">Amritsar is a historic city located in the northwestern Indian state of Punjab. It is famous for being home to the magnificent Golden Temple, the most sacred place for Sikhs around the world. The city showcases a blend of rich culture, vibrant markets, and mouthwatering Punjabi cuisine. Amritsar is also known for the Jallianwala Bagh massacre, a tragic event that took place during British colonial rule. Visitors can experience the patriotic fervor at the Wagah Border ceremony, a daily military parade and closing ceremony on the India-Pakistan border near Amritsar. </p>
+                    <p style="text-align:center"><a href= "amritsar.html" style="text-decoration: none;"><input type="button" value="VIEW PLAN" class="planbtn"></a></p>
+                
+            </div>
+        </div>
+    </div>
+    <hr style="border:1px solid #4299ae;">
+    
+    <div class="goa2">
+        <div class="heading">
+            <h1 style="color:#4299ae;">darjeeling</h1>
+        </div>
+        <div class="content">
+            <div class="goa_pic">
+                <img src="static/travel_site_img/darjeeling.jpg" alt="" width="600px">
+            </div>
+            <div class="goa_t" style="width:50%">
+                <h1 style="color:#4299ae; text-align: center;">Explore darjeeling</h1>
+                    <p style="color: #4299ae;">
+                        Located in the Eastern Himalayas, it has an average elevation of 2,045 metres (6,709 ft).[10] To the west of Darjeeling lies the easternmost province of Nepal, to the east the Kingdom of Bhutan, to the north the Indian state of Sikkim, and farther north the Tibet Autonomous Region region of China. Bangladesh lies to the south and southeast, and most of the state of West Bengal lies to the south and southwest, connected to the Darjeeling region by a narrow tract. Kangchenjunga, the world's third-highest mountain, rises to the north and is prominently visible on clear days</p>
+                        <p style="text-align:center"><a href= "darjeeling.html" style="text-decoration: none;"><input type="button" value="VIEW PLAN" class="planbtn"></a></p>
+        </div>
+    </div>
+    <hr style="border:1px solid #4299ae;">
+    
+</body>
+
+</html>

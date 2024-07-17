@@ -1,0 +1,276 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'style3.css'%}">
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="navdec1">
+        <div class="navdecchild"><img src="{% static 'travel_site_img/logo.jpg'%}" alt="" width="100px" style="margin-right: 0rem;">
+        </div>
+        <div class="navdecchild"><a class="navitems" href="index2.html">HOME</a></div>
+        <div class="navdecchild"><a class="navitems" href="goldenpackage.html">PACKAGE</a></div>
+        <div class="navdecchild"><a class="navitems" href="#plan">PLAN</a></div>
+      </div>
+    </nav>
+  </header>
+  <section>
+    <div class="picsec">
+      <h2 style="font-size: 40px; font-family:Lato, Arial, sans-serif; padding-left:4rem">Varanasi Short Trip
+      </h2>
+      <h2 style="font-size: 28px; font-family: sans-serif; padding-left:4rem">&#8377 7000 per person</h2>
+      <img src="{% static 'travel_site_img/destination.jpg'%}" alt="" height="40px" style="position:relative;padding-left:3.3rem">
+      <span style="font-size: 22px; font-family: sans-serif; position: absolute;">Varanasi</span>
+     
+      
+      
+      <div class="pictures">
+        <img src="{% static 'travel_site_img/var1.jpg'%}" alt="" width="30%" HEIGHT="400px">
+        <img src="{% static 'travel_site_img/var2.jpeg'%}" alt="" width="30%" height="400px">
+        <!--<div class="centerimg" width="40%">
+          <img src="{% static 'travel_site_img/goa_2.jpg" alt="" width="100%" height="30%">
+          <img src="{% static 'travel_site_img/goa_3.jpg" alt="" width="100%" height="30%">
+        </div>-->
+        <img src="{% static 'travel_site_img/var3.jpg'%}" alt="" width="30%" HEIGHT="400px" style="margin-left: 9px;">
+      </div>
+
+    </div>
+  </section>
+  <section>
+    <div>
+      <h2 style="font-size: 40px; font-family:Lato, Arial, sans-serif;margin-left:9.5rem ">About Package</h2>
+      <div style="display:flex;justify-content:stretch;margin-left: 6rem;">
+        <p style="padding-left: 4rem;padding-right: 3rem;font-size:22px;font-family: Arial, Helvetica, sans-serif; width: 60%;text-align: justify;">
+            Book you lucrative tour package of Varanasi for 2 Nights, 3 Days offered by Asian Travels at  7,000 /Per Person .
+            Find detailed day wise itinerary of Varanasi tour package below.Varanasi is a city on the Ganges river in northern India that has a central place in the traditions of pilgrimage, death, and mourning in the Hindu world. 
+            The city has a syncretic tradition of Muslim artisanship that underpins its religious tourism.
+           </p>
+        <div style="width:40%;height: 300px;">
+          <div class="cost2">
+            <div class="cost_sub1">
+              <h2 style="font-size: 28px; font-family: sans-serif;">&#8377 7000</h2>
+              <h2 style="font-size: 28px; font-family: sans-serif;">/per person</h2>
+              <h2 style=" font-size: 28px; font-family: sans-serif;color:ash">*Excluding Applicable taxes</h2>
+
+            </div>
+            <div class="cost_sub2" style="position:relative;display:flex">
+              <img src="{% static 'travel_site_img/time.jpeg'%}" height="40px" alt="" style="position:absolute;">
+              <h2 style="font-size: 28px; font-family: sans-serif;position:absolute; right:30%; top:-10px">2 Nights / 3 Days</h2><span>
+                <a style="text-decoration: none;" href="try.html"><input type="button" value="Book" style="font-size: 28px; font-family: sans-serif;position:absolute;top:70px ;right:40% ;background-color:rgb(47, 228, 47);"></a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding:4rem 9.5rem;" class="summary">
+      <table>
+        <tr>
+          <td colspan="4" style="font-size:22px;text-align:centre;vertical-align:middle;background-color:rgb(147, 188, 249)">Package Summary</td>
+        </tr>
+        <tr id="table1">
+          <td>Day1</td>
+          <td><img src="{% static 'travel_site_img/car.png'%}" width="45px">Arrival </td>
+          <td><img src="{% static 'travel_site_img/visit.jpeg'%}" width="45px"> Sarnath/Ganga Aarti</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">Dinner at Hotel</td>
+        </tr>
+        <tr>
+          <td>Day2</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">Breakfast</td>
+          <td><img src="{% static 'travel_site_img/visit.jpeg'%}" width="45px">Temples Visit</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">Dinner at Hotel</td>
+        </tr>
+        <!--<tr>
+          <td>Day3</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg" width="45px">Breakfast</td>
+          <td><img src="{% static 'travel_site_img/visit.jpeg" width="45px"> temple and museum visit</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg" width="45px">Dinner at Hotel</td>
+        </tr>-->
+        <tr>
+          <td>Day3</td>
+          <td><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">Breakfast</td>
+          <td><img src="{% static 'travel_site_img/car.png'%}" width="45px">Departure</td>
+        </tr>
+      </table>
+    </div>
+    <div style="margin-left: 9.5rem;" id="plan">
+      <h2 style="font-size: 40px; font-family:Lato, Arial, sans-serif;">Detailed Daywise itenerary</h2>
+    </div>
+    <div id="overview">
+      <table style="margin-left:9.5rem; width: 80vw; background-color: azure;">
+        <tr>
+          <td>
+            <div class="main_p">
+              <h3 style="font-size: 30px; font-family:Lato, Arial, sans-serif;" >Day 1 - Arrival in Varanasi </h3>
+              <h3>CHECKIN @ 2PM</h3>
+              <div class="hotel">
+                <h2 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Vasu Hotel</h2>
+                <img src="{% static 'travel_site_img/varanasi_palace_hotel.jpg'%}" alt="" width="300px">
+
+
+              </div>
+
+
+            </div>
+          </td>
+          <td style="margin-top:40em;">
+            <h3><a>INCLUDED: <img src="{% static 'travel_site_img/pla.png'%}" style="width:45px"> 1 flight | <img
+                  src="{% static 'travel_site_img/hotel.jpeg'%}" width="45px"> Hotel | <img src="{% static 'travel_site_img/car.png'%}"
+                  width="45px"> 1 Transfer</a></h3>
+            <h3>Car service provided to hotel- 1hr</h3>
+            <h4>Baggage:</h4>
+            <h4><img src="{% static 'travel_site_img/cabin.png'%}" width="45px">Cabin:7kg</h4>
+            <h4><img src="{% static 'travel_site_img/bag.png'%}" width="45px">Check-in:15kg</h4>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <h3 style="font-size:22px;font-family: Arial, Helvetica, sans-serif">On reaching Varanasi, meet our representative at airport/railway station/Bus Station who will drop you at
+              hotel.In hotel while you the check-in formalities, take some rest for the day and afternoon s/seeing of Sarnath Tour
+              Evening sightseeing/Ganga Aarti (Ritual Aarti) Aarti starts just after sunset, as darkness begins to spread all over. </h3>
+          </td>
+          <td style="margin-left:20rem">
+            <br>
+            <br>
+
+          </td>
+
+        </tr>
+
+
+        <tr>
+          <td>
+            <h2 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Sarnath and Ganga Aarti </h2>
+          </td>
+        </tr>
+        <tr>
+
+          <td>
+
+            <img src="{% static 'travel_site_img/sarnath.jpg'%}" alt="" width="300px" height="200px">
+            <p>SARNATH</p>
+          </td>
+          <td>
+
+            <img src="{% static 'travel_site_img/ganga arthi.jpg'%}" alt="" width="300px" height="200px">
+            <p>GANGA AARTI</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">END OF THE DAY</h2>
+          </td>
+        <tr>
+          <td colspan="2">
+            <hr>
+          </td>
+        </tr>
+        </tr>
+
+
+        <tr>
+          <td>
+            <h3 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Day 2 - Visit Bharat Mata Temple ,Vishwanath Temple</h3>
+            <h2><a><img src="{% static 'travel_site_img/bf.jpg'%}" width="45px">BREAKFAST </a></h2>
+
+            <img src="{% static 'travel_site_img/durga-temple.jpg'%}" alt="" width="300px">
+          </td>
+          <td style="margin-left:20rem">
+            <h3 style="font-size:22px;font-family: Arial, Helvetica, sans-serif">Today morning post breakfast proceed to explore Bharat Mata Temple ,Tulsimans Temple ,Durga Temple,
+                Vishwanath Temple Later
+              return back by evening and stay overight at the hotel.</h3>
+          </td>
+        <tr>
+          <td>
+            <h2 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Places To Visit </h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+
+            <img src="{% static 'travel_site_img/bharat mata.jpg'%}" alt="" width="300px" height="150px">
+            <p>BHARAT MATA TEMPLE</p>
+          </td>
+          <td>
+
+            <img src="{% static 'travel_site_img/viswanath.jpg'%}" alt="" width="300px" height="150px">
+            <p>VISHWANATH TEMPLE</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">END OF THE DAY</h2>
+          </td>
+
+        </tr>
+        <tr>
+          <td colspan="2">
+            <hr>
+          </td>
+        </tr>
+        <!--<tr>
+
+          <td>
+            <h3 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Day 3 </h3>
+            <!--<h2><a><img src="{% static 'travel_site_img/bf.jpg" width="45px">BREAKFAST </a></h2>
+            <h3 style="color:#4299ae"> Day-3 Morning @ 10</h3>
+            <img src="{% static 'travel_site_img/goa_museum.jpg" alt="" width="300px">
+            <p>GOA MUSEUM</p>
+          </td>
+          <td>
+            <h3 style="color:#4299ae">Afternoon @ 2:30pm</h3>
+            <img src="{% static 'travel_site_img/maha.jpeg" alt="" width="350px">
+            <p>MAHADEV TEMPLE</p>
+
+          </td>
+        </tr>
+       <tr>
+              <td>
+                <h2 style="font-size: 30px; font-family:Lato, sans-serif">END OF THE DAY</h2>
+              </td>
+            <tr>
+              <td colspan="2">
+                <hr>
+              </td>
+            </tr>
+            </tr>
+          </td>
+        </tr>-->
+    
+        <tr>
+          <td>
+            <h3 style="font-size: 30px; font-family:Lato, Arial, sans-serif;">Day 3-Departure From Varanasi</h3>
+
+
+            <div class="home" style="width:75%">
+              <img src="{% static 'travel_site_img/plane.jpg'%}" alt="" width="250px">
+            </div>
+
+
+
+    </div>
+    </td>
+    <td style="margin-left:20rem">
+      <h3><a>INCLUDED: <img src="{% static 'travel_site_img/pla.png'%}" width="45px"> 1 flight | <img src="{% static 'travel_site_img/car.png"
+            width="45px"> 1 Transfer</a></h3>
+      <h4>Baggage:</h4>
+      <h4><img src="{% static 'travel_site_img/cabin.png'%}" width="45px">Cabin:7kg</h4>
+      <h4><img src="{% static 'travel_site_img/bag.png'%}" width="45px">Check-in:15kg</h4>
+    </td>
+    </tr>
+    </table>
+  </section>
+</body>
+
+</html>
